@@ -5,6 +5,7 @@ WORKDIR /administrator_app
 COPY requirements.txt /administrator_app/
 COPY administrator.py /administrator_app/
 RUN echo Installing Python packages listed in requirements.txt
+RUN cat /administrator_app/requirements.txt
 RUN pip install -r /administrator_app/requirements.txt
 EXPOSE 80
 RUN echo Starting python and starting the Flask service...
