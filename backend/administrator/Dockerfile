@@ -2,7 +2,7 @@ FROM python:3.7-alpine
 RUN apk add mariadb-dev
 RUN apk add build-base
 WORKDIR /administrator_app
-COPY administrator_lb.yaml /administrator_app/
+COPY administrator* /administrator_app/
 COPY requirements.txt /administrator_app/
 COPY administrator.py /administrator_app/
 RUN echo Installing Python packages listed in requirements.txt
